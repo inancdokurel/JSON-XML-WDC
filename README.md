@@ -31,6 +31,6 @@ I've noticed that there are a lot of people asking in our [community forums](htt
 
 I suggest deploying your own version of this WDC so you can have a dedicated application for your own use. Here are a few options for spinning up your own:
 
-1. [Deploy it on Heroku](https://heroku.com/deploy?template=https://github.com/KeshiaRose/json-xml-wdc)
+1. [Deploy it on Heroku](https://heroku.com/deploy?template=https://github.com/inancdokurel/json-xml-wdc)
 1. [Remix it on glitch](https://glitch.com/edit/#!/remix/json-xml-wdc)
 1. [Fork it on repl.it](https://repl.it/@KeshiaRose/json-xml-wdc#README.md)

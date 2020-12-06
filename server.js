@@ -23,7 +23,9 @@ app.post('/xml', (req, res) => {
   let xml = req.body.xml;
   parseString(xml, function (err, result) {
     res.json(result);
-  });
+  }).catch((error) => {
+    res.send({ error: error.message });
+  });;
 });
 
 app.post('/proxy/*', (req, res) => {
