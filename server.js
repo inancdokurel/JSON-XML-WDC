@@ -11,21 +11,19 @@ const fetch = require('node-fetch');
 const parseString = require('xml2js').parseString;
 const app = express();
 const PORT = process.env.PORT || 3000;
-
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
-
+app.use(express.urlencoded({ limit: '200mb', extended: true }));
+app.use(express.json({ limit: '200mb', extended: true }));
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
 app.post('/xml', (req, res) => {
   let xml = req.body.xml;
+  console.log(xml);
   parseString(xml, function (err, result) {
     res.json(result);
-  }).catch((error) => {
-    res.send({ error: error.message });
-  });;
+  });
 });
 
 app.post('/proxy/*', (req, res) => {
